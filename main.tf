@@ -1,11 +1,13 @@
-module "animals_table" {
+module "authors_table" {
   source = "./modules/dynamodb"
   
-  table_name = "Animals"
+  table_name = "Authors"
+  context = module.default.context
 }
 
-module "shelter_table" {
+module "courses_table" {
   source = "./modules/dynamodb"
   
-  table_name = "Shelter"
+  table_name = "Courses"
+  context = module.default.context
 }

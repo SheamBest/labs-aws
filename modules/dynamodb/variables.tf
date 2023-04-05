@@ -1,4 +1,6 @@
 variable "table_name" {
-  description = "Name"
-  type        = string
+  type = string
+}
+
+variable "context" {
 }
