@@ -11,3 +11,13 @@ module "courses_table" {
   table_name = "Courses"
   context = module.default.context
 }
+
+module "lambda" {
+  source = "./modules/lambda"
+
+  function_name = module.default.id
+  handler = "index.handler"
+  lambda_zip = "../lambda.zip"
+  context = module.default.context
+  runtime = "nodejs18.x"
+}
