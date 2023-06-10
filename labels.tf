@@ -1,7 +1,6 @@
-module "default" {
-  source = "cloudposse/label/null"
-  
-  namespace   = var.namespace
-  environment = var.environment
-  delimiter   = var.delimiter
+module "base_labels" {
+  source    = "git::https://github.com/cloudposse/terraform-null-label.git?ref=0.24.1"
+  namespace = var.namespace
+  stage     = var.stage
+  delimiter = var.delimiter
 }
